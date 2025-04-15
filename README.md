@@ -1,63 +1,90 @@
 # Blockchain-Based AI for Privacy-Preserving Identity Verification
 
-A secure, privacy-focused identity verification system that leverages blockchain technology and AI to provide robust identity management while preserving user privacy.
+A comprehensive solution that combines blockchain technology with AI for secure, private identity verification.
 
-## Features
+## Project Overview
 
-- **Biometric Verification**: Facial recognition and fingerprint verification
-- **Document Verification**: Support for government-issued IDs
-- **Blockchain Storage**: Immutable, decentralized identity data storage
-- **Smart Contracts**: Automated verification processes
-- **Privacy Preservation**: Zero-knowledge proofs and homomorphic encryption
-- **AI-Driven Fraud Detection**: Machine learning models to detect fraudulent activities
-- **User Control**: Granular access permissions for identity data
+This system enables secure identity verification through:
+- Biometric verification (facial recognition, fingerprints)
+- Government ID verification
+- Blockchain-based data storage and access control
+- Privacy-preserving techniques (zero-knowledge proofs, homomorphic encryption)
+- AI-driven fraud detection
 
-## System Architecture
+## Directory Structure
 
-The system is divided into several modules:
+- `backend/`: Flask REST API for the main application
+- `frontend/`: User interface for identity submission and verification
+- `blockchain/`: Smart contracts and blockchain integration
+- `ai_models/`: Machine learning models for verification and fraud detection
+- `utils/`: Shared utilities and helper functions
+- `contracts/`: Solidity smart contracts for identity management
+- `docs/`: Documentation and additional resources
 
-- **Blockchain Module**: Handles all blockchain interactions, smart contracts, and decentralized storage
-- **Identity Module**: Manages identity verification processes and documentation
-- **AI Module**: Implements ML models for verification and fraud detection
-- **Crypto Module**: Provides cryptographic functions, including zero-knowledge proofs and homomorphic encryption
-- **Interface Module**: Manages user interfaces and API endpoints
+## Setup Instructions
 
-## Installation
+### Prerequisites
 
-```bash
-# Clone the repository
-git clone https://github.com/yourusername/blockchain-identity-verification.git
-cd blockchain-identity-verification
+- Python 3.8+
+- Node.js 14+
+- Ethereum development environment (Ganache, Truffle)
+- MongoDB
 
-# Install dependencies
-pip install -r requirements.txt
+### Installation
 
-# Set up configuration
-cp config.example.yml config.yml
-# Edit config.yml with your specific settings
+1. Clone the repository:
+   ```
+   git clone <repository-url>
+   cd blockchain-ai-identity
+   ```
+
+2. Set up a virtual environment:
+   ```
+   python -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   ```
+
+3. Install dependencies:
+   ```
+   pip install -r requirements.txt
+   cd frontend && npm install
+   ```
+
+4. Configure environment variables:
+   ```
+   cp .env.example .env
+   # Edit .env with your configuration
+   ```
+
+5. Deploy smart contracts:
+   ```
+   cd blockchain
+   truffle migrate --reset
+   ```
+
+6. Start the application:
+   ```
+   # Terminal 1 - Backend
+   cd backend
+   python app.py
+   
+   # Terminal 2 - Frontend
+   cd frontend
+   npm start
+   ```
+
+## Testing
+
+Run the following command to execute tests:
+```
+python -m pytest
 ```
 
-## Usage
+## Security and Privacy
 
-```bash
-# Start the server
-python src/main.py
-
-# Run tests
-pytest
-```
-
-## Development
-
-This project follows a modular architecture to ensure separation of concerns and maintainability. Each module has its own responsibilities and interfaces with other modules through well-defined APIs.
-
-## Compliance
-
-This system is designed to comply with:
-- GDPR (General Data Protection Regulation)
-- CCPA (California Consumer Privacy Act)
-- W3C DID (Decentralized Identifiers) standards
-
-## License
-
-MIT 
+This system is designed with privacy and security as core principles:
+- End-to-end encryption
+- Zero-knowledge proofs for privacy-preserving verification
+- Homomorphic encryption for computations on encrypted data
+- Decentralized storage on blockchain
+- User-controlled data sharing 

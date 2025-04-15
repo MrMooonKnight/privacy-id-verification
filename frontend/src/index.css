@@ -1,0 +1,178 @@
+/* Import Google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', 'Roboto', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f9f9f9;
+  color: #263238;
+  min-height: 100vh;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+/* Page layout */
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* For sticky footer */
+main {
+  flex: 1 0 auto;
+}
+
+/* Enhanced typography */
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 0.5em;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #0B3954;
+}
+
+p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+/* Beautiful transitions */
+a, button, .MuiButton-root {
+  transition: all 0.2s ease-in-out !important;
+}
+
+button:hover, .MuiButton-root:hover {
+  transform: translateY(-2px);
+}
+
+/* Card styling */
+.MuiCard-root {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.MuiCard-root:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Form elements */
+.MuiTextField-root {
+  margin-bottom: 16px !important;
+}
+
+/* Form labels */
+.MuiInputLabel-root {
+  font-weight: 500;
+}
+
+/* Stepper customization */
+.MuiStepLabel-label {
+  font-weight: 500 !important;
+}
+
+.MuiStepLabel-active {
+  color: #1D7874 !important;
+  font-weight: 600 !important;
+}
+
+.MuiStepIcon-root.MuiStepIcon-active {
+  color: #1D7874 !important;
+}
+
+.MuiStepIcon-root.MuiStepIcon-completed {
+  color: #1D7874 !important;
+}
+
+/* Scrollbar customization */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #0B3954;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #196087;
+}
+
+/* Image upload previews */
+.upload-preview-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.upload-preview-container:hover {
+  transform: scale(1.02);
+}
+
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 400ms;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 400ms;
+}
+
+.camera-preview {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.dropzone {
+  border: 2px dashed #ccc;
+  border-radius: 4px;
+  padding: 2rem;
+  text-align: center;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+.dropzone:hover,
+.dropzone.active {
+  border-color: #3f51b5;
+  background-color: rgba(63, 81, 181, 0.05);
+}
+
+.image-preview {
+  max-width: 100%;
+  max-height: 300px;
+  margin: 1rem auto;
+  display: block;
+  border-radius: 4px;
+} 
